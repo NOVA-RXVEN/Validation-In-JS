@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <style>
+      body {
+        background-color: bisque;
+        text-align: center;
+        padding-top: 230px;
+        font-size: 30px;
+      }
+      input {
+        font-size: 45px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Enter Your Age⬇️</h2>
+    <input id="id1" type="number" min="1" max="100" required />
+
+    <button onclick="myFunction()">Submit</button>
+    <p id="result"></p>
+    <script>
+      function myFunction() {
+        var inpObj = document.getElementById("id1");
+        if (!inpObj.checkValidity()) {
+          document.getElementById("result").innerHTML =
+            inpObj.validationMessage;
+        } else {
+          document.getElementById("result").innerHTML = "Submited";
+        }
+      }
+    </script>
+  </body>
+</html>
